@@ -22,9 +22,13 @@ namespace OneDayOneCode.problems
 
         public static int FindLISLength(int[] nums)
         {
+            if (nums.Length ==0) return 0;
             int[] maxResultArrayWith = new int[nums.Length];
-            int[] maxResultArrayWithout = new int[nums.Length];
-            maxResultArrayWith[0] = 1;
+
+            for (int i = 0; i < maxResultArrayWith.Length; i++)
+            {
+                maxResultArrayWith[i] = 1;
+            }
 
             for (int i = 1; i < nums.Length; i++)
             {
@@ -32,25 +36,35 @@ namespace OneDayOneCode.problems
                 {
                     if ((nums[i] >= nums[j]))
                         maxResultArrayWith[i] = Math.Max(1 + maxResultArrayWith[j], maxResultArrayWith[i]);
-                    maxResultArrayWithout[i] = Math.Max(maxResultArrayWith[j], maxResultArrayWithout[i]);
 
                 } 
+            }
+
+            return maxResultArrayWith.Max();
+
+        }
+        public static int FindLISLengthV1(int[] nums)
+        {
+            if (nums.Length == 0) return 0;
+            int[] maxResultArrayWith = new int[nums.Length];
+            int[] maxResultArrayWithout = new int[nums.Length];
+            maxResultArrayWith[0] = 1;
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    if ((nums[i] >= nums[j]))
+                        maxResultArrayWith[i] = Math.Max(1 + maxResultArrayWith[j], maxResultArrayWith[i]);
+                    maxResultArrayWithout[i] = Math.Max(maxResultArrayWith[j], maxResultArrayWithout[i]);
+
+                }
             }
 
             return Math.Max(maxResultArrayWith[nums.Length - 1], maxResultArrayWithout[nums.Length - 1]);
 
         }
-        internal class Program
-        {
-            static void Main(string[] args)
-            {
-                int[] arr = {2,4,8,3,6,2,5,3,8,4};
-             
-                int result = LongestIncreasingSubsequence.FindLISLengthRec(arr, arr.Length - 1, int.MaxValue);
-                Console.WriteLine("Length of LIS: " + result);
-                result = LongestIncreasingSubsequence.FindLISLength(arr);
-                Console.WriteLine("Length of LIS: " + result);
-            }
-        }
+
+
     }
 }
