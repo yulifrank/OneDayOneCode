@@ -36,6 +36,10 @@ namespace OneDayOneCode.tests
             {
                 int result = ConsecutiveSumFinder.FindCountConsecutiveSequences(array, target);
                 Console.WriteLine($"Test #{testNum++}: Target = {target}, Expected = {expected}, Got = {result} => {(result == expected ? "PASS" : "FAIL")}");
+                result = ConsecutiveSumFinder.FindCountConsecutiveSequencesRec(array,0,0, target);
+                Console.WriteLine($"rec Test #{testNum++}: Target = {target}, Expected = {expected}, Got = {result} => {(result == expected ? "PASS" : "FAIL")}");
+
+
             }
         }
     }
