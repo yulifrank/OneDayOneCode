@@ -13,7 +13,12 @@ namespace OneDayOneCode.problems
         /// </summary>
       public  static int LongestValidParentheses(string s)
         {
-            int startIndex =s.IndexOf('(');
+            if (string.IsNullOrEmpty(s))
+                return 0;
+            int startIndex = s.IndexOf('(');
+
+            if (startIndex < 0)  
+                return 0;
             int countOpen = 0;
             int countClose = 0;
             for (int i = startIndex; i < s.Length; i++)

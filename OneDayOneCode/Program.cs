@@ -9,7 +9,7 @@ internal class Program
       //  LongestIncreasingSubsequenceTests.RunTests();
       //  ConsecutiveSumFinderTests.RunTests();
 
-        Console.WriteLine(MaxLengthValidParenthesesSubstring.LongestValidParentheses("(1234((3((2)"));
+        LongestValidParenthesesTests.RunTests();
        
 
     }
