@@ -8,5 +8,9 @@ namespace OneDayOneCode.problems
 {
     internal class MissingNumberSolver
     {
+        public int FindMissingNumber(int[] nums)
+        {
+            return -1;
+        }
     }
 }

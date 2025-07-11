@@ -11,34 +11,44 @@ namespace OneDayOneCode.problems
         /// <summary>
         /// מחזיר את האורך של תת‑המחרוזת התקינה הארוכה ביותר בתוך s.
         /// </summary>
-      public  static int LongestValidParentheses(string s)
-        {
-            if (string.IsNullOrEmpty(s))
-                return 0;
-            int startIndex = s.IndexOf('(');
+      //public  static int LongestValidParentheses(string s)
+      //  {
+      //      if (string.IsNullOrEmpty(s))
+      //          return 0;
+      //      int startIndex = s.IndexOf('(');
 
-            if (startIndex < 0)  
-                return 0;
-            int countOpen = 0;
-            int countClose = 0;
-            for (int i = startIndex; i < s.Length; i++)
-            {
-                if (s[i] == '(')
-                {
-                    countOpen++;
-                }
-                if (s[i] == ')') {
-                    countClose++;
-                    if (countOpen - countClose >= 0)
-                    {
-                        countClose--;
-                        countOpen--;
-                    }
-                }
+      //      if (startIndex < 0)  
+      //          return 0;
+      //      int countOpen = 0;
+      //      int countClose = 0;
+      //      for (int i = startIndex; i < s.Length; i++)
+      //      {
+      //          if (s[i] == '(')
+      //          {
+      //              countOpen++;
+      //          }
+      //          if (s[i] == ')') {
+      //              countClose++;
+      //              if (countOpen - countClose >= 0)
+      //              {
+      //                  countClose--;
+      //                  countOpen--;
+      //              }
+      //          }
           
-            }
-            return s.Length - countOpen -countClose - startIndex;
-        }
+      //      }
+      //      return s.Length - countOpen -countClose - startIndex;
+      //  }
+
+
+        //public static int LongestValidParentheses(string s)
+        //{
+        //    Stack<int> st = new Stack<int> ();
+        //    for (int i = 0; i < s.Length; i++) { 
+
+
+        //    }
+        //}
 
     }
   
