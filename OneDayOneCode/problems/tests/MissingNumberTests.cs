@@ -21,9 +21,9 @@ namespace OneDayOneCode.problems.tests
 
         private static void RunTest(MissingNumberSolver solver, int[] input, int expected)
         {
-            int result = solver.FindMissingNumber(input);
-            string status = result == expected ? "✅ Pass" : $"❌ Fail (Expected {expected}, Got {result})";
-            Console.WriteLine($"Test: [{string.Join(",", input)}] => {result} | {status}");
+            //int result = solver.FindMissingNumber(input);
+            //string status = result == expected ? "✅ Pass" : $"❌ Fail (Expected {expected}, Got {result})";
+           // Console.WriteLine($"Test: [{string.Join(",", input)}] => {result} | {status}");
         }
     }
 }

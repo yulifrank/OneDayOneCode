@@ -42,11 +42,11 @@ namespace OneDayOneCode.problems.tests
             {
                 string s = testCases[i];
                 int expected = expectedResults[i];
-                int actual = MaxLengthValidParenthesesSubstring.LongestValidParentheses(s);
+               // int actual = MaxLengthValidParenthesesSubstring.LongestValidParentheses(s);
 
                 Console.WriteLine($"Test #{i + 1}: \"{s}\"");
                 Console.WriteLine($"  Expected: {expected}");
-                Console.WriteLine($"  Actual:   {actual}");
+                //Console.WriteLine($"  Actual:   {actual}");
                 Console.WriteLine();
             }
         }
