@@ -25,6 +25,7 @@ namespace OneDayOneCode.problems.tests
             //string status = result == expected ? "✅ Pass" : $"❌ Fail (Expected {expected}, Got {result})";
            // Console.WriteLine($"Test: [{string.Join(",", input)}] => {result} | {status}");
         }
+
     }
 }
     
