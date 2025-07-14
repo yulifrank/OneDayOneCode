@@ -16,7 +16,6 @@ internal class Program
     }
 
 
-
     public static int MostFrequentNumber(int[] nums)
     {
         var counts = new Dictionary<int, int>();
