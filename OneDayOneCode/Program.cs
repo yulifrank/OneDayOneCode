@@ -14,6 +14,34 @@ internal class Program
         }
         return count;   
     }
+
+    public static int MostFrequentNumber(int[] nums)
+    {
+        var counts = new Dictionary<int, int>();
+
+        foreach (var num in nums)
+        {
+            if (counts.ContainsKey(num))
+                counts[num]++;
+            else
+                counts[num] = 1;
+        }
+
+        int maxCount = 0;
+        int mostFrequent = nums[0];
+
+        foreach (var pair in counts)
+        {
+            if (pair.Value > maxCount)
+            {
+                maxCount = pair.Value;
+                mostFrequent = pair.Key;
+            }
+        }
+
+        return mostFrequent;
+    }
+
     static void Main(string[] args)
     {
       //  LongestIncreasingSubsequenceTests.RunTests();
